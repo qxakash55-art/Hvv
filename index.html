@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>আমার জিনিয়া পাগলির জন্য 🥺💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff3e78;
+            --rose-gold: #ffb8d0;
+            --gold: #ffd89b;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 192, 219, 0.28);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #120514;
+            font-family: 'Hind Siliguri', sans-serif;
+            color: #fff5f8;
+            overflow-x: hidden;
+            position: relative;
+            padding: 18px;
+        }
+
+        /* Luxury Animated Aurora Background */
+        .aurora {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(85px);
+            opacity: 0.45;
+            animation: orbMove 14s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 340px;
+            height: 340px;
+            background: radial-gradient(circle, #ff2a6d, transparent 70%);
+            top: -80px;
+            left: -80px;
+        }
+
+        .orb-2 {
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, #9d17ff, transparent 70%);
+            bottom: -100px;
+            right: -90px;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, #ff758c, transparent 70%);
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.25;
+            animation-delay: -9s;
+        }
+
+        @keyframes orbMove {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, -35px) scale(1.18); }
+        }
+
+        /* Canvas for Sparkles & Fireworks */
+        #fxCanvas {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Music Toggle Button */
+        .music-btn {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 19px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .music-btn:active {
+            transform: scale(0.9);
+        }
+
+        /* Luxury Glass Card Container */
+        .glass-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 430px;
+        }
+
+        .card {
+            position: relative;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04));
+            backdrop-filter: blur(26px);
+            -webkit-backdrop-filter: blur(26px);
+            border: 1.5px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 34px 24px;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55),
+                        inset 0 1px 1px rgba(255, 255, 255, 0.35),
+                        0 0 40px rgba(255, 46, 109, 0.18);
+            overflow: hidden;
+            animation: cardAppear 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Subtle Shimmer Border Effect */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent 70%, rgba(255, 184, 208, 0.22) 85%, transparent 100%);
+            animation: rotateShimmer 8s linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes rotateShimmer {
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(35px) scale(0.92); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Step 1: Envelope Intro Screen */
+        .envelope-icon {
+            font-size: 76px;
+            display: inline-block;
+            margin-bottom: 14px;
+            filter: drop-shadow(0 0 22px rgba(255, 62, 120, 0.6));
+            animation: floatHeart 2.5s ease-in-out infinite;
+        }
+
+        @keyframes floatHeart {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.06); }
+        }
+
+        .vip-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(90deg, rgba(255, 62, 120, 0.25), rgba(255, 216, 155, 0.2));
+            border: 1px solid rgba(255, 216, 155, 0.45);
+            color: var(--gold);
+            padding: 5px 16px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            margin-bottom: 14px;
+        }
+
+        .title-fancy {
+            font-family: 'Galada', cursive;
+            font-size: 38px;
+            background: linear-gradient(135deg, #ffffff 10%, #ffb8d0 55%, #ffd89b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.35;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 2px 10px rgba(255, 62, 120, 0.25));
+        }
+
+        .sub-text {
+            color: #f3c6d7;
+            font-size: 15.5px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        /* Premium Glow Button */
+        .btn-glow {
+            position: relative;
+            background: linear-gradient(135deg, #ff2e63, #ff6b8b);
+            color: #fff;
+            border: none;
+            padding: 15px 34px;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 600;
+            font-family: 'Hind Siliguri', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 46, 99, 0.5),
+                        inset 0 1px 1px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
+            max-width: 270px;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 15px 38px rgba(255, 46, 99, 0.7);
+        }
+
+        .btn-glow:active {
+            transform: scale(0.97);
+        }
+
+        /* Step 2: Main Apology Card */
+        #mainScreen, #successScreen {
+            display: none;
+        }
+
+        .fade-in {
+            animation: smoothReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes smoothReveal {
+            0% { opacity: 0; transform: scale(0.9) translateY(15px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .mood-avatar {
+            font-size: 66px;
+            display: inline-block;
+            margin-bottom: 6px;
+            filter: drop-shadow(0 0 18px rgba(255, 184, 208, 0.45));
+            animation: gentleSway 2.4s ease-in-out infinite;
+        }
+
+        @keyframes gentleSway {
+            0%, 100% { transform: rotate(-4deg) scale(1); }
+            50% { transform: rotate(4deg) scale(1.06); }
+        }
+
+        .letter-box {
+            background: rgba(20, 7, 24, 0.45);
+            border: 1px solid rgba(255, 184, 208, 0.25);
+            border-radius: 22px;
+            padding: 18px 16px;
+            color: #ffeaf1;
+            font-size: 15px;
+            line-height: 1.75;
+            margin-bottom: 18px;
+            text-align: center;
+            box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .highlight-name {
+            color: #ffd89b;
+            font-weight: 700;
+        }
+
+        /* Interactive Promise Pills */
+        .promises-title {
+            font-size: 12.5px;
+            color: #ffb8d0;
+            margin-bottom: 9px;
+            letter-spacing: 0.3px;
+        }
+
+        .promise-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .promise-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 184, 208, 0.3);
+            color: #ffe2ec;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            user-select: none;
+        }
+
+        .promise-pill.checked {
+            background: rgba(255, 62, 120, 0.35);
+            border-color: #ffd89b;
+            color: #ffd89b;
+            transform: scale(1.06);
+            box-shadow: 0 0 14px rgba(255, 216, 155, 0.3);
+        }
+
+        .btn-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            min-height: 112px;
+            position: relative;
+        }
+
+        .btn-no {
+            background: rgba(255, 255, 255, 0.07);
+            color: #d7b2c0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14.5px;
+            font-weight: 500;
+            font-family: 'Hind Siliguri', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Step 3: Official Forgiveness Certificate */
+        .cert-badge {
+            margin-top: 14px;
+            padding: 12px 16px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(255, 216, 155, 0.16), rgba(255, 46, 99, 0.18));
+            border: 1px dashed rgba(255, 216, 155, 0.6);
+            color: #ffd89b;
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+
+        .emoji-confetti {
+            position: fixed;
+            font-size: 26px;
+            pointer-events: none;
+            z-index: 99;
+            animation: dropEmoji 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        @keyframes dropEmoji {
+            0% { transform: translateY(-30px) rotate(0deg) scale(0.7); opacity: 1; }
+            80% { opacity: 1; }
+            100% { transform: translateY(105vh) rotate(480deg) scale(1.1); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="aurora">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <canvas id="fxCanvas"></canvas>
+
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="মিউজিক চালু/বন্ধ">🎵</button>
+
+    <div class="glass-wrapper">
+        <div class="card">
+            
+            <!-- STEP 1: Luxury Envelope Intro -->
+            <div id="introScreen">
+                <div class="vip-tag">✨ স্পেশাল ডেলিভারি ✨</div>
+                <br>
+                <div class="envelope-icon">💌</div>
+                <h1 class="title-fancy">জিনিয়ার জন্য চিঠি</h1>
+                <p class="sub-text">
+                    আমার <span class="highlight-name">জিনিয়া পাগলির</span> জন্য একটা ছোট্ট মন-ভালো-করা সারপ্রাইজ আছে... 🥺🎀
+                </p>
+                <button class="btn-glow" onclick="openLetter()">
+                    চিঠিটা খোলো ✨💖
+                </button>
+            </div>
+
+            <!-- STEP 2: Main Apology Screen -->
+            <div id="mainScreen">
+                <div class="mood-avatar" id="moodEmoji">🥺</div>
+                <br>
+                <div class="vip-tag">🌹 আমার প্রিয় জিনিয়া পাগলি 🌹</div>
+                <h1 class="title-fancy">সরি আমার সোনা 💖</h1>
+
+                <div class="letter-box">
+                    <span class="highlight-name">জিনিয়া</span>, আমার সত্যিই অনেক বড় ভুল হয়ে গেছে! 😔 তুমি রাগ করে থাকলে আমার পৃথিবীটাই থমকে যায়... একদম কিছু ভালো লাগে না। 💔<br><br>
+                    তোমার ওই মিষ্টি হাসিটা ছাড়া আমার দিন চলে না! 🌸 প্লিজ, আর অভিমান করে থেকো না... তোমার এই পাগলটাকে মাফ করে দাও না? 🥺👉👈
+                </div>
+
+                <div class="promises-title">👇 আমার ছোট্ট প্রমিসগুলোতে ট্যাপ করো (দেখো কী হয়!)</div>
+                <div class="promise-row">
+                    <div class="promise-pill" onclick="checkPromise(this)">🤞 আর রাগাবো না</div>
+                    <div class="promise-pill" onclick="checkPromise(this)">🍦 ট্রিট দেবো</div>
+                    <div class="promise-pill" onclick="checkPromise(this)">🧸 চিরকাল পাশে</div>
+                </div>
+
+                <div class="btn-stack">
+                    <button class="btn-glow" id="yesBtn" onclick="forgiveMe()">
+                        মাফ করে দিলাম 💖🥺
+                    </button>
+                    <button class="btn-no" id="noBtn">
+                        রাগ করে থাকবো 😤💢
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Grand Celebration Screen -->
+            <div id="successScreen">
+                <div class="mood-avatar">🥰</div>
+                <br>
+                <div class="vip-tag">👑 পৃথিবীর সেরা মানুষ 👑</div>
+                <h1 class="title-fancy">থ্যাংক ইউ জিনিয়া! 🎉</h1>
+                <div class="letter-box">
+                    ইয়াহু!! তুমি মাফ করে দিয়েছো বলে আমার বুক থেকে যেন পাহাড় নেমে গেলো! 🦋✨<br><br>
+                    আমি তোমাকে অনেক, অনেক ভালোবাসি আমার <span class="highlight-name">জিনিয়া পাগলি</span>! 🥰 কথা দিচ্ছি, তোমার মুখে সবসময় হাসি ফুটিয়ে রাখবো! 😘🌹🧸
+                    <div class="cert-badge">
+                        ✅ অফিশিয়ালি মাফ-নামা গৃহীত • জিনিয়া 💖 পাগল
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        /* ==========================================
+           1. SOFT MUSIC BOX SYNTH (No External Files)
+           ========================================== */
+        let audioCtx = null;
+        let isMusicPlaying = false;
+        let melodyInterval = null;
+
+        // Sweet romantic chord notes (Hz)
+        const notes = [523.25, 659.25, 783.99, 987.77, 783.99, 659.25, 440.00, 523.25, 659.25, 783.99, 659.25, 523.25, 349.23, 440.00, 523.25, 659.25, 392.00, 493.88, 587.33, 783.99];
+        let noteIdx = 0;
+
+        function playSoftNote(freq) {
+            if (!audioCtx || !isMusicPlaying) return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.06, audioCtx.currentTime + 0.05);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.4);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 1.45);
+            } catch (e) {}
+        }
+
+        function startMusic() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!audioCtx) audioCtx = new AudioContext();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                isMusicPlaying = true;
+                document.getElementById('musicBtn').style.display = 'flex';
+                document.getElementById('musicBtn').innerText = '🎵';
+
+                if (!melodyInterval) {
+                    playSoftNote(notes[noteIdx]);
+                    melodyInterval = setInterval(() => {
+                        if (isMusicPlaying) {
+                            noteIdx = (noteIdx + 1) % notes.length;
+                            playSoftNote(notes[noteIdx]);
+                        }
+                    }, 580);
+                }
+            } catch (e) {}
+        }
+
+        function toggleMusic() {
+            isMusicPlaying = !isMusicPlaying;
+            document.getElementById('musicBtn').innerText = isMusicPlaying ? '🎵' : '🔇';
+        }
+
+        /* ==========================================
+           2. CANVAS SPARKLES, TOUCH TRAIL & FIREWORKS
+           ========================================== */
+        const canvas = document.getElementById('fxCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let stars = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Ambient twinkling stars
+        for (let i = 0; i < 45; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: Math.random() * 1.8 + 0.5,
+                alpha: Math.random(),
+                speed: Math.random() * 0.02 + 0.005
+            });
+        }
+
+        function spawnParticles(x, y, count, speedMult = 1) {
+            const colors = ['#ff2e63', '#ffb8d0', '#ffd89b', '#ffffff', '#ff758c'];
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = (Math.random() * 3.5 + 1) * speedMult;
+                particles.push({
+                    x, y,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed,
+                    size: Math.random() * 3.5 + 1.5,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 1,
+                    decay: Math.random() * 0.02 + 0.015
+                });
+            }
+        }
+
+        // Touch / Mouse sparkle trail
+        window.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.55) spawnParticles(e.clientX, e.clientY, 1, 0.5);
+        });
+        window.addEventListener('touchstart', (e) => {
+            const t = e.touches[0];
+            if (t) spawnParticles(t.clientX, t.clientY, 6, 0.8);
+        });
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw twinkling stars
+            stars.forEach(s => {
+                s.alpha += s.speed;
+                if (s.alpha > 1 || s.alpha < 0.1) s.speed *= -1;
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 225, 238, ${Math.abs(s.alpha)})`;
+                ctx.fill();
+            });
+
+            // Draw active particles
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vy += 0.04; // slight gravity
+                p.life -= p.decay;
+
+                if (p.life <= 0) {
+                    particles.splice(i, 1);
+                    continue;
+                }
+                ctx.globalAlpha = p.life;
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            ctx.globalAlpha = 1;
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        /* ==========================================
+           3. INTERACTIVE FLOW & BUTTON LOGIC
+           ========================================== */
+        function openLetter() {
+            startMusic();
+            spawnParticles(window.innerWidth / 2, window.innerHeight / 2, 35, 1.5);
+            document.getElementById('introScreen').style.display = 'none';
+            const main = document.getElementById('mainScreen');
+            main.style.display = 'block';
+            main.classList.add('fade-in');
+        }
+
+        function checkPromise(el) {
+            el.classList.toggle('checked');
+            const rect = el.getBoundingClientRect();
+            spawnParticles(rect.left + rect.width / 2, rect.top + rect.height / 2, 14, 0.9);
+            if (el.classList.contains('checked') && !el.innerText.includes('✓')) {
+                el.innerText = el.innerText + ' ✓';
+            } else if (!el.classList.contains('checked')) {
+                el.innerText = el.innerText.replace(' ✓', '');
+            }
+        }
+
+        // Runaway "No" button
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const moodEmoji = document.getElementById('moodEmoji');
+        let noCount = 0;
+
+        const pleadTexts = [
+            "সত্যিই রাগ করবা? 😭",
+            "জিনিয়া প্লিজ নাআআ 🥺",
+            "আমার খুব কষ্ট হয় 💔",
+            "একবার মাফ করে দাও 🧸",
+            "কান্না করে দিবো কিন্তু 😭"
+        ];
+        const pleadEmojis = ['😭', '😿', '🥺', '💔', '🤧'];
+
+        function dodgeNoButton(e) {
+            if (e) e.preventDefault();
+            noCount++;
+            moodEmoji.innerText = pleadEmojis[noCount % pleadEmojis.length];
+            noBtn.innerText = pleadTexts[noCount % pleadTexts.length];
+
+            const scale = Math.min(1 + noCount * 0.07, 1.28);
+            yesBtn.style.transform = `scale(${scale})`;
+
+            noBtn.style.position = 'fixed';
+            noBtn.style.zIndex = '999';
+
+            const w = noBtn.offsetWidth;
+            const h = noBtn.offsetHeight;
+            const maxX = Math.max(30, window.innerWidth - w - 20);
+            const maxY = Math.max(30, window.innerHeight - h - 20);
+
+            noBtn.style.left = Math.max(20, Math.random() * maxX) + 'px';
+            noBtn.style.top = Math.max(20, Math.random() * maxY) + 'px';
+        }
+
+        noBtn.addEventListener('mouseover', dodgeNoButton);
+        noBtn.addEventListener('touchstart', dodgeNoButton);
+        noBtn.addEventListener('click', dodgeNoButton);
+
+        // Grand Celebration
+        function forgiveMe() {
+            document.getElementById('mainScreen').style.display = 'none';
+            noBtn.style.display = 'none';
+            const success = document.getElementById('successScreen');
+            success.style.display = 'block';
+            success.classList.add('fade-in');
+
+            // Fireworks bursts
+            for (let b = 0; b < 6; b++) {
+                setTimeout(() => {
+                    const fx = Math.random() * (window.innerWidth * 0.7) + window.innerWidth * 0.15;
+                    const fy = Math.random() * (window.innerHeight * 0.5) + window.innerHeight * 0.15;
+                    spawnParticles(fx, fy, 45, 1.9);
+                }, b * 380);
+            }
+
+            // Floating Emoji Rain
+            const emojis = ['💖', '🎉', '🌸', '🧸', '😘', '🎀', '✨', '🌹', '💘', '🦋'];
+            for (let i = 0; i < 60; i++) {
+                setTimeout(() => {
+                    const el = document.createElement('div');
+                    el.className = 'emoji-confetti';
+                    el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+                    el.style.left = Math.random() * 96 + 'vw';
+                    el.style.top = '-25px';
+                    el.style.animationDuration = (Math.random() * 1.8 + 2.2) + 's';
+                    document.body.appendChild(el);
+                    setTimeout(() => el.remove(), 4200);
+                }, i * 50);
+            }
+        }
+    </script>
+</body>
+</html>
